@@ -143,22 +143,14 @@ main > p{
     background-color: var(--dark-purple-argb);
 }
 
-
-
-
-.info-upload {
+figure{
     display: flex;
-    align-items: center; /* Alinha a imagem e o texto verticalmente */
-  }
-  
-  .info-upload img {
-    width: 16px; /* Ajusta a largura da imagem conforme necessário */
-    height: 16px; /* Ajusta a altura da imagem para manter a proporção */
-    margin-right: 8px; /* Espaço entre a imagem e o texto */
-  }
-  
-
-
+    align-items: center;
+    font-size: 12px;
+    gap: 10px;
+    margin: 8px 0px;
+    color: var(--dark-white);
+}
 
 
 /*! Fomulário */
