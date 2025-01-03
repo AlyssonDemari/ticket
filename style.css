@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+:root{
+--white : hsl(0, 0%, 100%);
+--dark-white : hsl(252, 6%, 83%);
+--light-purple : hsl(245, 15%, 58%);
+--dark-purple : hsl(245, 19%, 35%);
+--dark-purple-argb : hsla(245, 19%, 35%, 0.479);
+--dark-blue : hsl(248, 70%, 10%);
+
+--Orange : hsl(7, 88%, 67%);
+--Orange-hover : hsl(7, 71%, 60%);
+
+--Gradient: linear-gradient(hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+
+--font: "Inconsolata", serif;;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+    color: var(--white);
+}
+
+/* Remover position absolute no body */
+body {
+    background: url(assets/images/background-desktop.png) no-repeat;
+    background-size: cover;
+    position: relative; 
+    z-index: 0; 
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+/*! Jeito que encontrei para fazer o background */
+.teste {
+    background: url(assets/images/pattern-squiggly-line-top.svg) no-repeat ;
+    background-size: cover;
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    top: 10vh;
+    left: 70vw;
+    z-index: 0; 
+}
+.teste2 {
+    background: url(assets/images/pattern-squiggly-line-bottom.svg) no-repeat ;
+    background-size: cover;
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    top: 30vh;
+    left: 0vw;
+    z-index: 1;
+}
+
+
+main{
+    border: 2px solid red;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    z-index: 10;
+}
+
+main > p{
+    color:var(--dark-white);
+}
+
+.container-drop p{
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+/*! Estilização do container para por a foto*/
+.square-upload{
+    width: 350px;
+    height: 150px;
+    background-color:var(--dark-purple-argb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark-white);
+    border: 2px dashed var(--dark-purple);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: color 300ms ease-in-out, background 300ms ease-in-out, outline 300ms ease-in-out, border 300ms ease-in-out    ; 
+    transition: 0.4s;  
+}
+.square-upload:hover{ 
+    background-color: var(--dark-purple);    
+    border: 2px dashed var(--dark-white);
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+.square-upload:active{
+    transform: scale(0.7);
+    transition: 0.3s;
+}
+.square-upload:focus{
+    color: #777;
+    background: var(--light-purple) ;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    transition: 0.4s;
+}
+#input-upload{
+    display: none;
+}
+.picture-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    font-size: 15px;
+    padding: 0px 50px;
+}
+.picture-img{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+.square-drop{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+.imgDrop{
+    width: 50px;
+    padding: 5px;
+    border: 2px solid var(--dark-purple);
+    border-radius: 10px;
+    background-color: var(--dark-purple-argb);
+}
+
+
+
+
+.info-upload {
+    display: flex;
+    align-items: center; /* Alinha a imagem e o texto verticalmente */
+  }
+  
+  .info-upload img {
+    width: 16px; /* Ajusta a largura da imagem conforme necessário */
+    height: 16px; /* Ajusta a altura da imagem para manter a proporção */
+    margin-right: 8px; /* Espaço entre a imagem e o texto */
+  }
+  
+
+
+
+
+/*! Fomulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em; /* Adiciona espaço entre os elementos */
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+label{
+    text-align: left;
+}
+input{
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    height: 2.3rem;
+    padding: 10px;    
+    margin-top: 8px;
+    background-color: var(--dark-purple-argb);
+    border: 2px solid var(--dark-purple-argb);
+    transition: 0.3s;
+}
+input:active{
+    transform: scale(0.7);
+    transition: 0.3s;
+}
+input::placeholder{
+    color: var(--dark-white);
+}
+input[type="button"]{
+    background-color: var(--Orange);
+    border: none;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--dark-blue);
+}
+input[type="button"]:hover{
+    background-color: var(--Orange-hover);
+}
