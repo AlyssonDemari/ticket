@@ -194,3 +194,82 @@ input[type="button"]{
 input[type="button"]:hover{
     background-color: var(--Orange-hover);
 }
+
+/*Second page */
+
+.container-ticked{
+    width: 100%;
+    position: relative;
+    border: 2px solid blue;
+}
+
+.container-texto{
+    border: 2px solid rgb(0, 255, 42);
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    height: 225px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container-texto p{
+    color: var(--dark-white);
+}
+
+.container-texto figure{
+    font-size: 14px;
+    border: 2px solid pink;
+    width: 300px;
+}
+
+.icon-logo{
+    width: 12%;
+}
+
+.icon-github img{
+    width: 7%; 
+}
+
+.avatar {
+    width: 18%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.texto-ticked{
+    border: 2px solid chocolate;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+
+.container-generad{
+    border: 2px solid gold;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.ticked-generad{
+    border: 2px solid rgb(47, 52, 126);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.codigo{
+    position: absolute;
+    top: 48%;
+    left: 85%;
+    transform: rotate(90deg);
+}
+.codigo h2{
+    font-weight: 300;
+    color: var(--dark-white);
+}
+.data-event{
+    margin-left: 50px;
+}
