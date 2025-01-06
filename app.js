@@ -51,6 +51,13 @@ function createNewPage(){
      
     body.innerHTML = ''
 
+    const divteste = document.createElement('div')
+    divteste.classList.add('teste')
+    const divteste2 = document.createElement('div')
+    divteste2.classList.add('teste2')
+    body.appendChild(divteste)
+    body.appendChild(divteste2)
+
     //? Cria o main
     const containerMain = document.createElement('main')
     document.body.appendChild(containerMain);
