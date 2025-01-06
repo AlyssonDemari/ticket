@@ -4,12 +4,13 @@ const pictureImageText = "Drag and drop or click to upload"
 pictureImage.innerHTML = `<img class="imgDrop" src="assets/images/icon-upload.svg" alt="">`
 pictureImage.innerHTML += pictureImageText
 
-let uploadImage = null
 
+let uploadImage = null
 
 inputFile.addEventListener('change', function(e){
     const inputTarget = e.target
     const file = inputTarget.files[0]
+    
 
     if(file){
         const reader = new FileReader(file)
@@ -34,6 +35,7 @@ inputFile.addEventListener('change', function(e){
         })
         reader.readAsDataURL(file)
     }else {
+        alert('[ERRO]')
         pictureImage.innerHTML = pictureImageText
     }
 })
@@ -43,7 +45,7 @@ const email = document.querySelector('input#email')
 const github = document.querySelector('input#github')
 
 
-function teste(){
+function createNewPage(){
 
     const body = document.querySelector('body')
      
@@ -55,7 +57,7 @@ function teste(){
 
     //? Cria o h1 da página 
     const tituloH1 = document.createElement('h1')
-    tituloH1.innerHTML = `Congrats, ${fullName.value}! Your ticket is ready`
+    tituloH1.innerHTML = `Congrats, <span>${fullName.value}</span>! Your ticket is ready`
     containerMain.appendChild(tituloH1);
 
     //? Cria o Parágrafo da página 
@@ -138,4 +140,42 @@ function teste(){
     codigo.appendChild(numeroCod)
     containerTicked.appendChild(codigo)
 
+}
+
+function createTicked(){
+    if (!inputFile.files.length) {
+        const iconDrop = document.querySelector('i.fa-solid');
+        const informacaoDrop = document.querySelector('.informacao-drop');
+
+        iconDrop.style.color = "red";
+        informacaoDrop.style.color = "red";
+        
+        informacaoDrop.style.transform = 'scale(1.10)';
+        informacaoDrop.style.transition = 'transform 0.3s ease'; 
+        setTimeout(function() {
+            informacaoDrop.style.transform = 'scale(1)';
+            informacaoDrop.style.transition = 'transform 0.3s ease'; 
+        }, 100); 
+    }
+    else if(!fullName.value.length){
+        const iconDrop = document.querySelector('i#erro');
+        const textDrop = document.querySelector('#erro');
+        iconDrop.style.display = "inline-block";
+        textDrop.style.display = "block";
+    }else if(!email.value.length){
+
+        const iconDrop = document.querySelector('i#erro1');
+        const textDrop = document.querySelector('#erro1');
+        iconDrop.style.display = "inline-block";
+        textDrop.style.display = "block";
+
+    }else if(!github.value.length){
+        const iconDrop = document.querySelector('i#erro2');
+        const textDrop = document.querySelector('#erro2');
+        iconDrop.style.display = "inline-block";
+        textDrop.style.display = "block";
+    }
+    else{
+        createNewPage()
+    }
 }

@@ -61,7 +61,6 @@ body {
 
 
 main{
-    border: 2px solid red;
     width: 50%;
     display: flex;
     align-items: center;
@@ -73,6 +72,12 @@ main{
 
 main > p{
     color:var(--dark-white);
+}
+
+span {
+    background-image: linear-gradient(90deg, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+    background-clip: text;
+    color: transparent;
 }
 
 .container-drop p{
@@ -152,6 +157,15 @@ figure{
     color: var(--dark-white);
 }
 
+.informacao-drop{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    gap: 10px;
+    margin: 8px 0px;
+    color: var(--dark-white);
+}
+
 
 /*! Fomulário */
 form {
@@ -200,11 +214,9 @@ input[type="button"]:hover{
 .container-ticked{
     width: 100%;
     position: relative;
-    border: 2px solid blue;
 }
 
 .container-texto{
-    border: 2px solid rgb(0, 255, 42);
     position: absolute;
     top: 10%;
     left: 5%;
@@ -220,7 +232,6 @@ input[type="button"]:hover{
 
 .container-texto figure{
     font-size: 14px;
-    border: 2px solid pink;
     width: 300px;
 }
 
@@ -232,29 +243,25 @@ input[type="button"]:hover{
     width: 7%; 
 }
 
-.avatar {
-    width: 18%;
-    height: 100%;
+.avatar { 
+    width: 80px;
+    height: 80px;
     border-radius: 20px;
 }
 
 .texto-ticked{
-    border: 2px solid chocolate;
     display: flex;
     flex-direction: column;
     align-items: start;
 }
 
-
 .container-generad{
-    border: 2px solid gold;
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
 .ticked-generad{
-    border: 2px solid rgb(47, 52, 126);
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -273,3 +280,12 @@ input[type="button"]:hover{
 .data-event{
     margin-left: 50px;
 }
+#erro, #erro1, #erro2{
+    display: none;
+    color: red;
+}
+
+#erro i, #erro1 i, #erro2 i{
+    margin-right: 10px;
+}
+
