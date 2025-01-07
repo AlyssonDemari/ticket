@@ -1,23 +1,25 @@
-# Frontend Mentor - Conference ticket generator
+# Frontend Mentor - Conference ticket generator solution
 
 ![Design preview for the Conference ticket generator coding challenge](./preview.jpg)
 
-## The challenge
+### Feito com:
 
-Seu desafio é criar este gerador de ingressos para conferência e deixá-lo o mais parecido possível com o design.
+- Marcação semântica HTML5
+- Propriedades personalizadas de CSS
+- Flexbox
+- Fluxo de trabalho Mobile-first
 
-Você pode usar qualquer ferramenta que preferir para completar o desafio. Então, se você tem algo que gostaria de praticar, fique à vontade para tentar.
+### Objetivo ao criar o projeto  
 
-Os usuários devem ser capazes de:
+O objetivo deste projeto foi aprender a utilizar o elemento <input type="file"> e armazenar a foto carregada de maneira que ela pudesse ser reutilizada em outro contexto. Especificamente, busquei implementar uma forma de exibir a imagem carregada de maneira separada enquanto o usuário preenche os demais campos do formulário.
 
-- Preencher o formulário com seus dados
-- Receber mensagens de validação se:
--Algum campo estiver em branco
-- O endereço de e-mail não for formatado corretamente
-- O upload da foto de perfil for muito grande ou no formato errado
-- Preencher o formulário apenas usando o teclado
-- Ter entradas, dicas de campo e mensagens de erro anunciadas pelo leitor de tela
-- Ver o ingresso da conferência gerado quando o formulário for enviado com sucesso
-- Visualizar o layout otimizado da interface dependendo do tamanho da tela do dispositivo
-- Ver estados de foco e hover em todos os elementos interativos da página
 
+### Dificuldades 
+
+- Usar todas as imagnes proposta como background
+- Deixar a função createNewPage() com funções separadas
+- Fazer uma validação no email 
+
+## O que melhorar futuramente 
+
+- Criar funções separadas para melhorar a manutenção do código
