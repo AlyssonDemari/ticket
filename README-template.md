@@ -1,5 +1,7 @@
 # Frontend Mentor - Conference ticket generator solution
 
+![Design preview for the Conference ticket generator coding challenge](./preview.jpg)
+
 ### Feito com:
 
 - Marcação semântica HTML5
