@@ -1,6 +1,6 @@
 # Frontend Mentor - Conference ticket generator solution
 
-<a target="_blank" href="https://alyssondemari.github.io/ticket/">Ticket Generator</a>
+<h1><a target="_blank" href="https://alyssondemari.github.io/ticket/">Ticket Generator</a></h1>
 
 ### Feito com:
 
