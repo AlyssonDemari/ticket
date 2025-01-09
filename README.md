@@ -11,15 +11,15 @@
 
 ### Objetivo ao criar o projeto  
 
-O objetivo deste projeto foi aprender a utilizar o elemento <input type="file"> e armazenar a foto carregada de maneira que ela pudesse ser reutilizada em outro contexto. Especificamente, busquei implementar uma forma de exibir a imagem carregada de maneira separada enquanto o usuário preenche os demais campos do formulário.
+- O objetivo deste projeto foi aprender a utilizar o elemento <input type="file"> e armazenar a foto carregada de maneira que ela pudesse ser reutilizada em outro contexto. Especificamente, busquei implementar uma forma de exibir a imagem carregada de maneira separada enquanto o usuário preenche os demais campos do formulário.
+- Aprender a usar Arrow Functions e usar funções com parâmetros 
 
 
 ### Dificuldades 
 
 - Usar todas as imagnes proposta como background
-- Deixar a função createNewPage() com funções separadas
 - Fazer uma validação no email 
 
 ## O que melhorar futuramente 
 
-- Criar funções separadas para melhorar a manutenção do código
+[X] Criar funções separadas para melhorar a manutenção do código
