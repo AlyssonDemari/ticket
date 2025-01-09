@@ -44,6 +44,19 @@ const fullName = document.querySelector('input#name')
 const email = document.querySelector('input#email')
 const github = document.querySelector('input#github')
 
+email.addEventListener('input', function() {
+    email.value = email.value.toLowerCase();
+});
+
+fullName.addEventListener('input', function() {
+    let value = fullName.value;
+    value = value.split(' ').map(function(word) {
+      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    }).join(' ');
+    
+    fullName.value = value;
+  });
+
 
 function createNewPage(){
 
