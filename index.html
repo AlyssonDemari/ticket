@@ -18,56 +18,54 @@
 </head>
 <body>
 
-  <!--! Jeito que encontrei para fazer o background -->
-  <div class="teste"></div>
-  <div class="teste2"></div>
-
-  <main>
-    <header>
-      <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
-      <p>Secure your spot at next year's biggest coding conference.</p>
-    </header>
+  <section id="background">
+    <main>
+      <header>
+        <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+        <p>Secure your spot at next year's biggest coding conference.</p>
+      </header>
     
-    <section class="contImage">
-      <div class="container-drop">
-        <p id="p">Upload Avatar</p>
-        <label class="square-upload" for="input-upload" tabindex="0">
-          <div class="square-drop">
-            <input type="file" accept="image/*" id="input-upload">
-            <p class="picture-image"></p>
+      <section class="contImage">
+        <div class="container-drop">
+          <p id="p">Upload Avatar</p>
+          <label class="square-upload" for="input-upload" tabindex="0">
+            <div class="square-drop">
+              <input type="file" accept="image/*" id="input-upload">
+              <p class="picture-image"></p>
+            </div>
+          </label>
+          <p class="informacao-drop"><i class="fa-solid fa-circle-info"></i>Upload your photo (JPG or PNG, max size: 500KB).</p>
+        </div>
+      </section>
+    
+      <section class="formulario">
+        <form>
+          <div class="form-group">
+            <label for="name">
+              Full Name
+              <input type="text" name="name" id="name">
+              <p id="erro" class="informacao-drop"><i id="erro" class="fa-solid fa-circle-info"></i>Preencha o nome corretamente.</p>
+            </label>
           </div>
-        </label>
-        <p class="informacao-drop"><i class="fa-solid fa-circle-info"></i>Upload your photo (JPG or PNG, max size: 500KB).</p>
-      </div>
-    </section>
-    
-    <section class="formulario">
-      <form>
-        <div class="form-group">
-          <label for="name">
-            Full Name
-            <input type="text" name="name" id="name">
-            <p id="erro" class="informacao-drop"><i id="erro" class="fa-solid fa-circle-info"></i>Preencha o nome corretamente.</p>
-          </label>
-        </div>
-        <div class="form-group">
-          <label for="email">
-            Email Address
-            <input type="email" name="email" id="email" placeholder="example@email.com">
-            <p id="erro1" class="informacao-drop"><i id="erro1" class="fa-solid fa-circle-info"></i>Preencha o e-mail corretamente.</p>
-          </label>
-        </div>
-        <div class="form-group">
-          <label for="github">
-            GitHub Username
-            <input type="text" name="github" id="github" placeholder="@yourusername">
-            <p id="erro2" class="informacao-drop"><i id="erro2" class="fa-solid fa-circle-info"></i>Preencha o e-mail corretamente.</p>
-          </label>
-        </div>
-        <input type="button" value="Generate My Ticket" onclick="createTicked()">
-      </form>
-    </section>
-  </main>
+          <div class="form-group">
+            <label for="email">
+              Email Address
+              <input type="email" name="email" id="email" placeholder="example@email.com">
+              <p id="erro1" class="informacao-drop"><i id="erro1" class="fa-solid fa-circle-info"></i>Preencha o e-mail corretamente.</p>
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="github">
+              GitHub Username
+              <input type="text" name="github" id="github" placeholder="@yourusername">
+              <p id="erro2" class="informacao-drop"><i id="erro2" class="fa-solid fa-circle-info"></i>Preencha o e-mail corretamente.</p>
+            </label>
+          </div>
+          <input type="button" value="Generate My Ticket" onclick="createTicked()">
+        </form>
+      </section>
+    </main>
+  </section>
 
   <script src="app.js"></script>
 

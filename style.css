@@ -26,39 +26,25 @@
 
 /* Remover position absolute no body */
 body {
-    background: url(assets/images/background-desktop.png) no-repeat;
-    background-size: cover;
-    position: relative; 
-    z-index: 0; 
-    height: 100vh; 
+    background: url(assets/images/background-desktop.png);
+}
+
+#background {
+    background: 
+    url(assets/images/pattern-lines.svg) no-repeat 100% 100%, 
+    url(assets/images/pattern-squiggly-line-bottom.svg) no-repeat -40% 100%, 
+    url(assets/images/pattern-squiggly-line-top.svg) no-repeat 100% -20%, 
+    url(assets/images/pattern-circle.svg) no-repeat 80% 70%;
+    background-size: 120% 150%, 70% 70%, 20% 50%, 20% 50%; /* Ajuste os tamanhos individualmente */
+    background-attachment: fixed, fixed, fixed, fixed;
+    width: 98vw;
+    height: 98vh;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-
 }
-/*! Jeito que encontrei para fazer o background */
-.teste {
-    background: url(assets/images/pattern-squiggly-line-top.svg) no-repeat ;
-    background-size: cover;
-    width: 30%;
-    height: 30%;
-    position: absolute;
-    top: 10vh;
-    left: 70vw;
-    z-index: 0; 
-}
-.teste2 {
-    background: url(assets/images/pattern-squiggly-line-bottom.svg) no-repeat ;
-    background-size: cover;
-    width: 70%;
-    height: 70%;
-    position: absolute;
-    top: 30vh;
-    left: 0vw;
-    z-index: 1;
-}
-
 
 main{
     width: 50%;
@@ -209,77 +195,6 @@ input[type="button"]:hover{
     background-color: var(--Orange-hover);
 }
 
-/*Second page */
-
-.container-ticked{
-    width: 100%;
-    position: relative;
-}
-
-.container-texto{
-    position: absolute;
-    top: 10%;
-    left: 5%;
-    height: 225px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.container-texto p{
-    color: var(--dark-white);
-}
-
-.container-texto figure{
-    font-size: 14px;
-    width: 300px;
-}
-
-.icon-logo{
-    width: 12%;
-}
-
-.icon-github img{
-    width: 7%; 
-}
-
-.avatar { 
-    width: 80px;
-    height: 80px;
-    border-radius: 20px;
-}
-
-.texto-ticked{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-}
-
-.container-generad{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.ticked-generad{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-}
-
-.codigo{
-    position: absolute;
-    top: 48%;
-    left: 85%;
-    transform: rotate(90deg);
-}
-.codigo h2{
-    font-weight: 300;
-    color: var(--dark-white);
-}
-.data-event{
-    margin-left: 50px;
-}
 #erro, #erro1, #erro2{
     display: none;
     color: red;
@@ -287,6 +202,99 @@ input[type="button"]:hover{
 
 #erro i, #erro1 i, #erro2 i{
     margin-right: 10px;
+}
+
+
+
+/*Second page */
+
+
+.contPai{
+    width: 605px;
+    height: 283px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: url(assets/images/pattern-ticket.svg)no-repeat;
+    padding: 30px;
+}
+
+.contInfo{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.codigo{
+    transform: rotate(90deg);
+}
+
+.codigo h1{
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--dark-white);
+}
+
+
+#img-mark{
+    width: 11%;
+}
+
+.info-empresa{
+    display: flex;
+    align-items: start;
+    gap: 10px;
+}
+
+.info-empresa-txt{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 1.5rem;
+    gap: 15px;
+}
+
+.info-empresa-txt h2{
+    font-size: 1.5em;
+}
+.info-empresa-txt p{
+    font-size: 0.7em;
+    color: var(--dark-white);
+}
+
+
+.info-usuario{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#img-avatar{
+    width: 18%;
+    aspect-ratio: 4/4;
+    border-radius: 10px;
+}
+
+.info-usuario-txt{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    text-align: left;
+    justify-content: space-evenly;
+}
+
+.info-usuario-txt h2{
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.info-usuario-txt p{
+    margin: 0px;
+    font-size: 1.2em;
+    color: var(--dark-white);
 }
 
 
@@ -328,13 +336,52 @@ input[type="button"]:hover{
         font-size: 1.2rem;
     }
 
-    .square-upload{
-        width: 100%;
+    .contPai{
+        width: 340px; 
+        height: 200px; 
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: url(assets/images/pattern-ticket.svg) no-repeat;
+        background-size: contain; 
+        background-position: center; 
+        padding: 30px 10px 30px 20px;
     }
 
-    .picture-image{
-        font-size: 13.5px;
+        #img-mark{
+        width: 15%;
     }
+
+    .info-empresa-txt h2{
+        font-size: 0.9em;
+    }
+    .info-empresa-txt p{
+        font-size: 0.5em;
+    }
+
+    #img-avatar{
+        width: 25%;
+        aspect-ratio: 4/4;
+        border-radius: 10px;
+    }
+    
+
+    .info-usuario-txt figure{
+        margin: 0px;
+    }
+    
+    .info-usuario-txt h2{
+        margin: 0px;
+        font-size: 0.9em;
+    }
+    
+    .info-usuario-txt p{
+        margin: 0px;
+        font-size: 1em;
+    }
+
+
+
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
