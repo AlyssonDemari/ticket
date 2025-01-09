@@ -1,19 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ticket Page</title>
-    <link rel="stylesheet" href="teste.css">
-</head>
-<body>
+const fullName = document.querySelector('input#name')
+const email = document.querySelector('input#email')
+const github = document.querySelector('input#github')
 
+const body = document.querySelector('body');
+
+body.innerHTML = `
     <section id="background">
         <main>
-            <div id="header">
+            <header id="header">
                 <h2>Congrats, <span id="fullName">${fullName.value}</span>! <br>Your ticket is ready</h2>
                 <p class="pHeaderPage2">We've emailed your ticket to <span id="email">${email.value}</span> and will send updates in the run up to the event.</p>
-            </div>
+            </header>
         
             <div class="ticked">
                 <div class="contPai">
@@ -26,7 +23,8 @@
                             </div>
                         </div> 
                         <div class="info-usuario">
-                            <img id="img-avatar" src="${uploadImage}" alt="Avatar usuário">
+                            <img id="img-avatar" src="assets/images/image-avatar.jpg" alt="Avatar usuário">
+                            <!-- src="${uploadImage} -->
                             <div class="info-usuario-txt">
                                 <h2 id="fullName">${fullName.value}</h2>
                                    <figure><img src="assets/images/icon-github.svg" alt=" "> <p>${adicionarArroba(github.value)}</p></figure>
@@ -39,8 +37,6 @@
                 </div>
             </div>
         </main>
-      </section> 
 
-      <script src="app.js"></script>
-</body>
-</html>
+    </section>
+`

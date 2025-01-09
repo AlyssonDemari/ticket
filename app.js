@@ -130,7 +130,7 @@ function createTicked(){
 
 const adicionarArroba = () => {
     if(github.value.indexOf('@') === 0){
-        return
+        return github.value
     }else{
         return '@' + github.value
     }
