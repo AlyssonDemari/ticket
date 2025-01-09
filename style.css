@@ -27,7 +27,7 @@
 
 /* Remover position absolute no body */
 body {
-    background: url(assets/images/background-desktop.png);
+    background: url(assets/images/background-desktop.png)no-repeat center center;
 }
 
 #background {
@@ -360,7 +360,7 @@ figure{
 
 @media (min-width: 320px) and (max-width: 480px) {
     body {
-        background: url(assets/images/background-mobile.png) no-repeat;
+        background: url(assets/images/background-mobile.png) no-repeat center center;
         height: 100vh;
     }
 
@@ -494,7 +494,7 @@ figure{
 
 @media (min-width: 481px) and (max-width: 768px) {
     body {
-        background: url(assets/images/background-tablet.png) no-repeat;
+        background: url(assets/images/background-tablet.png) no-repeat center center;
     }
 
     #background {
