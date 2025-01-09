@@ -23,6 +23,7 @@
 ## O que melhorar futuramente 
 
 - [X] Criar funções separadas para melhorar a manutenção do código
+- [ ] Fazer um filtro para aceitar apenas imagens com 500kb e no formato JPG e PNG
 
 <hr>
 
@@ -45,3 +46,4 @@
 
 *** Future improvements
 - [X] Create separate functions to improve code maintainability.
+- [ ] Create a filter to accept only images that are 500KB in size and in JPG or PNG format.
