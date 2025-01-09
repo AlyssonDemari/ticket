@@ -22,4 +22,25 @@
 
 ## O que melhorar futuramente 
 
-[X] Criar funções separadas para melhorar a manutenção do código
+- [X] Criar funções separadas para melhorar a manutenção do código
+
+
+### Made with:
+
+- HTML5 Semantic Markup
+- Custom CSS Properties
+- Flexbox
+- Mobile-first Workflow
+
+### Goal when creating the project  
+
+- The goal of this project was to learn how to use the <input type="file"> element and store the uploaded photo in a way that it could be reused in another context. Specifically, I aimed to implement a way to display the uploaded image separately while the user fills out the other form fields.
+- Learn to use Arrow Functions and use functions with parameters
+
+### Difficulties 
+
+- Using all the proposed images as backgrounds
+- Performing email validation 
+
+** Future improvements
+- [X] Create separate functions to improve code maintainability.
