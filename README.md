@@ -25,6 +25,7 @@
 - [X] Criar funções separadas para melhorar a manutenção do código
 
 <hr>
+
 ### Made with:
 
 - HTML5 Semantic Markup
