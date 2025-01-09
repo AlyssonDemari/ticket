@@ -47,14 +47,15 @@ const github = document.querySelector('input#github')
 
 function createNewPage(){
 
-    const body = document.querySelector('body')
+    const main = document.querySelector('main')
      
-    body.innerHTML = ''
+    main.innerHTML = ''
 
-    body.innerHTML = `
-        <main>
-            <h1>Congrats, <span id="fullName">${fullName.value}</span>! Your ticket is ready</h1>
-            <p>We've emailed your ticket to <span id="email">${email.value}</span> and will send updates in the run up to the event.</p>
+    main.innerHTML = `
+            <header id="header">
+                <h2>Congrats, <span id="fullName">${fullName.value}</span>! <br>Your ticket is ready</h2>
+                <p class="pHeaderPage2">We've emailed your ticket to <span id="email">${email.value}</span> and will send updates in the run up to the event.</p>
+            </header>
         
             <div class="ticked">
                 <div class="contPai">
@@ -70,7 +71,7 @@ function createNewPage(){
                             <img id="img-avatar" src="${uploadImage}" alt="Avatar usuário">
                             <div class="info-usuario-txt">
                                 <h2 id="fullName">${fullName.value}</h2>
-                                   <figure><img src="assets/images/icon-github.svg" alt=" "> <p>${github.value}</p></figure>
+                                   <figure><img src="assets/images/icon-github.svg" alt=" "> <p>${adicionarArroba(github.value)}</p></figure>
                             </div>
                         </div>
                     </div>
@@ -79,7 +80,6 @@ function createNewPage(){
                     </div>
                 </div>
             </div>
-        </main>
     `
 
 }
@@ -104,20 +104,37 @@ function createTicked(){
         const textDrop = document.querySelector('#erro');
         iconDrop.style.display = "inline-block";
         textDrop.style.display = "block";
-    }else if(!email.value.length){
-
+    } else if(!email.value.length){
         const iconDrop = document.querySelector('i#erro1');
         const textDrop = document.querySelector('#erro1');
         iconDrop.style.display = "inline-block";
         textDrop.style.display = "block";
-
-    }else if(!github.value.length){
-        const iconDrop = document.querySelector('i#erro2');
-        const textDrop = document.querySelector('#erro2');
-        iconDrop.style.display = "inline-block";
-        textDrop.style.display = "block";
-    }
-    else{
-        createNewPage()
+    } else {
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailRegex.test(email.value)) {
+            const iconDrop = document.querySelector('i#erro1');
+            const textDrop = document.querySelector('#erro1');
+            iconDrop.style.display = "inline-block";
+            textDrop.style.display = "block";
+            textDrop.textContent = "Por favor, insira um e-mail válido.";
+        } else if(!github.value.length){
+            const iconDrop = document.querySelector('i#erro2');
+            const textDrop = document.querySelector('#erro2');
+            iconDrop.style.display = "inline-block";
+            textDrop.style.display = "block";
+        } else {
+            createNewPage();
+        }
     }
 }
+
+const adicionarArroba = () => {
+    if(github.value.indexOf('@') === 0){
+        return
+    }else{
+        return '@' + github.value
+    }
+}
+
+
+
