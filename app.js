@@ -195,7 +195,7 @@ function createTicked(){
             const textDrop = document.querySelector('#erro1');
             iconDrop.style.display = "inline-block";
             textDrop.style.display = "block";
-            textDrop.textContent = "Por favor, insira um e-mail válido.";
+            textDrop.textContent = "Please enter a valid email.";
         } else if(!github.value.length){
             const iconDrop = document.querySelector('i#erro2');
             const textDrop = document.querySelector('#erro2');
