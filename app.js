@@ -51,37 +51,103 @@ function createNewPage(){
      
     main.innerHTML = ''
 
-    main.innerHTML = `
-            <header id="header">
-                <h2>Congrats, <span id="fullName">${fullName.value}</span>! <br>Your ticket is ready</h2>
-                <p class="pHeaderPage2">We've emailed your ticket to <span id="email">${email.value}</span> and will send updates in the run up to the event.</p>
-            </header>
-        
-            <div class="ticked">
-                <div class="contPai">
-                    <div class="contInfo">
-                        <div class="info-empresa">
-                            <img id="img-mark" src="assets/images/logo-mark.svg" alt="Logo empresa">
-                            <div class="info-empresa-txt">
-                                <h2>Codind Conf</h2>
-                                <p>Jan 31, 2025 / Austin, TX</p>
-                            </div>
-                        </div>
-                        <div class="info-usuario">
-                            <img id="img-avatar" src="${uploadImage}" alt="Avatar usuário">
-                            <div class="info-usuario-txt">
-                                <h2 id="fullName">${fullName.value}</h2>
-                                   <figure><img src="assets/images/icon-github.svg" alt=" "> <p>${adicionarArroba(github.value)}</p></figure>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="codigo">
-                        <h1>#01609</h1>
-                    </div>
-                </div>
-            </div>
-    `
+    const createHeader = () => {
+        const header = document.createElement('header');
+        header.id = "header"
+        main.appendChild(header);
 
+        const h2 = document.createElement('h2');
+        h2.innerHTML = `Congrats, <span id="fullName">${fullName.value}</span>!<br>Your ticket is ready`;
+        header.appendChild(h2);
+
+        const p = document.createElement('p');
+        p.classList.add('pHeaderPage2');
+        p.innerHTML = `We've emailed your ticket to <span id="email">${email.value}</span> and will send updates in the run up to the event.`
+        header.appendChild(p);
+    }
+
+    const createTicked = () => {
+        const div = document.createElement('div');
+        div.classList.add('ticked');
+        main.appendChild(div);
+
+        const contPai = document.createElement('div');
+        contPai.classList.add('contPai');
+        div.appendChild(contPai);
+
+        const contInfo = document.createElement('div');
+        contInfo.classList.add('contInfo');
+        contPai.appendChild(contInfo);
+
+        const codigo = document.createElement('div');
+        codigo.classList.add('codigo');
+        codigo.innerHTML = `<h1>#01609</h1>` 
+        contPai.appendChild(codigo);
+
+        createEmpresa(contInfo)
+    }
+
+    const createEmpresa = (contInfo) => {
+        const infoEmpresa = document.createElement('div');
+        infoEmpresa.classList.add('info-empresa');
+        contInfo.appendChild(infoEmpresa);
+        
+        const imgMark = document.createElement('img');
+        imgMark.id = "img-mark";
+        imgMark.src = "assets/images/logo-mark.svg";
+        imgMark.alt = "Logo empresa";
+        infoEmpresa.appendChild(imgMark);
+
+        const infoEmpresaTxt = document.createElement('div');
+        infoEmpresaTxt.classList.add('info-empresa-txt');
+        infoEmpresa.appendChild(infoEmpresaTxt);
+
+        const h2 = document.createElement('h2');
+        h2.innerHTML = `Codind Conf`;
+        infoEmpresaTxt.appendChild(h2)
+
+        const p = document.createElement('p');
+        p.innerHTML = `Jan 31, 2025 / Austin, TX`;
+        infoEmpresaTxt.appendChild(p)
+
+        createUsuario(contInfo)
+    }
+
+    const createUsuario = (contInfo) => {
+        const infoUsuario = document.createElement('div');
+        infoUsuario.classList.add('info-usuario');
+        contInfo.appendChild(infoUsuario);
+
+        const imgAvatar = document.createElement('img');
+        imgAvatar.id = "img-avatar";
+        imgAvatar.src = `${uploadImage}`;
+        imgAvatar.alt = "Avatar do usuário";
+        infoUsuario.appendChild(imgAvatar);
+
+        const infoUsuarioTxt = document.createElement('div');
+        infoUsuarioTxt.classList.add('info-usuario-txt'); 
+        infoUsuario.appendChild(infoUsuarioTxt);
+
+        const h2 = document.createElement('h2');
+        h2.id = "fullName";
+        h2.innerHTML = `${fullName.value}`;
+        infoUsuarioTxt.appendChild(h2)
+
+        const figure = document.createElement('figure');
+        infoUsuarioTxt.appendChild(figure)
+
+        const img = document.createElement('img');
+        img.src = "assets/images/icon-github.svg";
+        img.alt = " logo gitHub ";
+        figure.appendChild(img);
+
+        const p = document.createElement('p');
+        p.innerHTML = adicionarArroba(github.value); /*! aqui */
+        figure.appendChild(p);
+    }
+
+    createHeader()
+    createTicked()
 }
 
 function createTicked(){
