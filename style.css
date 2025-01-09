@@ -38,8 +38,8 @@ body {
     url(assets/images/pattern-circle.svg) no-repeat 80% 70%;
     background-size: 120% 150%, 70% 70%, 20% 50%, 20% 50%; 
     background-attachment: fixed, fixed, fixed, fixed;
-    width: 98vw;
-    height: 98vh;
+    width: 100vw;
+    height: 100vh;
     margin: 0;
     padding: 0;
     display: flex;
