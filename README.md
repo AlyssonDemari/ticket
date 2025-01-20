@@ -44,6 +44,6 @@
 - Using all the proposed images as backgrounds
 - Performing email validation 
 
-*** Future improvements
+### Future improvements
 - [X] Create separate functions to improve code maintainability.
 - [ ] Create a filter to accept only images that are 500KB in size and in JPG or PNG format.
